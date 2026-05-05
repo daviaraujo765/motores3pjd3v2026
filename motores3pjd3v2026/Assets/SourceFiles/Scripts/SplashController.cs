@@ -11,8 +11,7 @@ public class SplashController : MonoBehaviour
     IEnumerator IrParaMenu()
     {
         yield return new WaitForSeconds(2f);
-
-        GameManager.Instancia.DefinirEstado(GameManager.EstadoJogo.MenuPrincipal);
+        
         GameManager.Instancia.CarregarCena("MenuPrincipal");
     }
 }

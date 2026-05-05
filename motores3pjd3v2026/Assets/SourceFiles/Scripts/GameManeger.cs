@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        // Singleton
         if (Instancia != null && Instancia != this)
         {
             Destroy(gameObject);
@@ -38,9 +37,20 @@ public class GameManager : MonoBehaviour
         Debug.Log("Estado atual: " + estadoAtual);
     }
 
-    // Controle de cenas
     public void CarregarCena(string nomeCena)
     {
+        switch (nomeCena)
+        {
+
+            case "MenuPrincipal":
+                DefinirEstado(EstadoJogo.MenuPrincipal);
+                break;
+
+            case "GetStarted_Scene":
+                DefinirEstado(EstadoJogo.Gameplay);
+                break;
+        }
+
         SceneManager.LoadScene(nomeCena);
     }
 }
