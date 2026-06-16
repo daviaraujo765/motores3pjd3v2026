@@ -52,5 +52,10 @@ public class GameManager : MonoBehaviour
         }
 
         SceneManager.LoadScene(nomeCena);
+		
+		  if (nomeCena == "GetStarted_Scene")
+		{
+		  SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
+   		 }
     }
 }
