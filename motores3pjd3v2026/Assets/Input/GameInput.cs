@@ -144,6 +144,61 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": ""Arrow KEYS"",
+                    ""id"": ""2f847fa5-1be5-4ae9-9d98-00db6884f684"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""13ff2e95-d44d-428f-af63-fcdfe1f31f9f"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";TecladoeMouseSingleP2"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""7b11dd1a-4486-4f5a-b88b-e0592d384a70"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";TecladoeMouseSingleP2"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""8a334536-d178-4067-a39d-eb4b8faf1d68"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";TecladoeMouseSingleP2"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""a032628e-ac43-452d-8b82-817b8da65a1c"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";TecladoeMouseSingleP2"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""df4914b3-da35-43ee-b586-e82230a97f50"",
                     ""path"": ""<Gamepad>/leftStick"",
@@ -211,6 +266,17 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""86a20bc4-0b23-4c66-a7c0-e9d37a99ac31"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";ControleP2"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""c7d944e5-6fa0-4e50-af33-d0a8247c1774"",
                     ""path"": """",
                     ""interactions"": """",
@@ -271,6 +337,33 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         {
             ""name"": ""Controle"",
             ""bindingGroup"": ""Controle"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""TecladoeMouseSingleP2"",
+            ""bindingGroup"": ""TecladoeMouseSingleP2"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""ControleP2"",
+            ""bindingGroup"": ""ControleP2"",
             ""devices"": [
                 {
                     ""devicePath"": ""<Gamepad>"",
@@ -604,6 +697,32 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         {
             if (m_ControleSchemeIndex == -1) m_ControleSchemeIndex = asset.FindControlSchemeIndex("Controle");
             return asset.controlSchemes[m_ControleSchemeIndex];
+        }
+    }
+    private int m_TecladoeMouseSingleP2SchemeIndex = -1;
+    /// <summary>
+    /// Provides access to the input control scheme.
+    /// </summary>
+    /// <seealso cref="UnityEngine.InputSystem.InputControlScheme" />
+    public InputControlScheme TecladoeMouseSingleP2Scheme
+    {
+        get
+        {
+            if (m_TecladoeMouseSingleP2SchemeIndex == -1) m_TecladoeMouseSingleP2SchemeIndex = asset.FindControlSchemeIndex("TecladoeMouseSingleP2");
+            return asset.controlSchemes[m_TecladoeMouseSingleP2SchemeIndex];
+        }
+    }
+    private int m_ControleP2SchemeIndex = -1;
+    /// <summary>
+    /// Provides access to the input control scheme.
+    /// </summary>
+    /// <seealso cref="UnityEngine.InputSystem.InputControlScheme" />
+    public InputControlScheme ControleP2Scheme
+    {
+        get
+        {
+            if (m_ControleP2SchemeIndex == -1) m_ControleP2SchemeIndex = asset.FindControlSchemeIndex("ControleP2");
+            return asset.controlSchemes[m_ControleP2SchemeIndex];
         }
     }
     /// <summary>
