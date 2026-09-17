@@ -40,7 +40,7 @@ namespace StarterAssets
 			SprintInput(value.isPressed);
 		}
 #endif
-
+            
 			private void Awake()
 	{
 		SetCursorState(cursorLocked);
