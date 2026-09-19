@@ -19,13 +19,12 @@ public class ShareKeyboardP2 : MonoBehaviour
         );
 
         playerInput.SwitchCurrentControlScheme(
-            "TecladoMouseSingleP2",
+            "TecladoEMouseSingleP2",
             Keyboard.current
         );
 
-        // Faz o P2 usar somente as bindings do esquema P2
         playerInput.actions.bindingMask =
-            InputBinding.MaskByGroup("TecladoMouseSingleP2");
+            InputBinding.MaskByGroup("TecladoEMouseSingleP2");
 
         playerInput.ActivateInput();
     }
