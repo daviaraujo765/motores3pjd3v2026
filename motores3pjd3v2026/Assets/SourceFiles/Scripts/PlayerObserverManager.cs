@@ -1,20 +1,18 @@
 using System;
+using UnityEngine;
 
 public static class PlayerObserverManager
 {
-    public static event Action<int> OnCoinsChanged;
+    public static event Action<Player> OnCoinCollected;
+    public static event Action<Player, int> OnCoinsChanged;
 
-    public static event Action OnCoinCollected;
-
-
-    public static void NotifyCoinsChanged(int coins)
+    public static void NotifyCoinsChanged(Player player, int coins)
     {
-        OnCoinsChanged?.Invoke(coins);
+        OnCoinsChanged?.Invoke(player, coins);
     }
 
-
-    public static void NotifyCoinCollected()
+    public static void NotifyCoinCollected(Player player)
     {
-        OnCoinCollected?.Invoke();
+        OnCoinCollected?.Invoke(player);
     }
 }

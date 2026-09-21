@@ -14,11 +14,13 @@ public class Player : MonoBehaviour
         PlayerObserverManager.OnCoinCollected -= CollectCoin;
     }
 
-
-    void CollectCoin()
+    void CollectCoin(Player player)
     {
+        if (player != this)
+            return;
+
         coins++;
 
-        PlayerObserverManager.NotifyCoinsChanged(coins);
+        PlayerObserverManager.NotifyCoinsChanged(this, coins);
     }
 }

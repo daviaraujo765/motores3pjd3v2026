@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CoinUI : MonoBehaviour
 {
+    public Player player;
     public TextMeshProUGUI coinsText;
 
     private void OnEnable()
@@ -15,8 +16,11 @@ public class CoinUI : MonoBehaviour
         PlayerObserverManager.OnCoinsChanged -= UpdateUI;
     }
 
-    void UpdateUI(int coins)
+    void UpdateUI(Player player, int coins)
     {
+        if (player != this.player)
+            return;
+
         coinsText.text = "Moedas: " + coins;
     }
 }
