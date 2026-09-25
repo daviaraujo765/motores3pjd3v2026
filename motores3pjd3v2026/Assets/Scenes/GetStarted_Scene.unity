@@ -517,6 +517,10 @@ PrefabInstance:
       propertyPath: ChannelMask
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3258984755981062961, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
+      propertyPath: playerNumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3795091336040275115, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2
@@ -776,6 +780,10 @@ PrefabInstance:
     - target: {fileID: 2483219246021380318, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
       propertyPath: ChannelMask
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258984755981062961, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
+      propertyPath: playerNumber
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3795091336040275115, guid: 332df604d1fc7fd46ae4013ce9b4a5d6, type: 3}
       propertyPath: m_LocalPosition.x

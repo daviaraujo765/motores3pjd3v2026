@@ -2,7 +2,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private int playerNumber;
+    
     int coins = 0;
+    
+    public int PlayerNumber => playerNumber;
 
     private void OnEnable()
     {
